@@ -1,0 +1,53 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "洪厚彪",
+                "enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#cccccc"
+            }            
+        },
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": ""
+				"enablePullDownRefresh":true
+			}
+		}
+		
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "firstProject",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#C0C0C0",
+		"list": [{
+			"pagePath" : "pages/home/home",
+			"text": "组件"
+		}, {
+			"pagePath": "pages/index/index",
+			"text": "接口"
+		}]
+	},
+	"condition": { //模式配置，仅开发期间生效
+	    "current": 0, //当前激活的模式（list 的索引项）
+	    "list": [{
+	            "name": "swiper", //模式名称
+	            "path": "pages/home/home", //启动页面，必选
+	            "query": "interval=4000&autoplay=false" //启动参数，在页面的onLoad函数里面得到。
+	        },
+	        {
+	            "name": "test",
+	            "path": "pages/index/index"
+	        }
+	    ]
+	}
+}
